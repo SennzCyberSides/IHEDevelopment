@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IHE | Indonesia Highway Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap');
+        
+        :root {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #020617;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #3b82f6, #8b5cf6, #f43f5e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-mesh {
+            background-image: 
+                radial-gradient(at 0% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+                radial-gradient(at 50% 0%, hsla(225,39%,20%,1) 0, transparent 50%), 
+                radial-gradient(at 100% 0%, hsla(225,39%,10%,1) 0, transparent 50%);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #3b82f6; }
+    </style>
+</head>
+<body class="hero-mesh">
+
+    <nav class="fixed w-full z-[100] px-6 py-4 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto flex justify-between items-center glass rounded-2xl px-6 py-3">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center rotate-3 shadow-[0_0_20px_rgba(37,99,235,0.4)]">
+                    <i class="fa-solid fa-car-side text-white"></i>
+                </div>
+                <span class="text-2xl font-black tracking-tighter">IHE<span class="text-blue-500">.</span></span>
+            </div>
+            
+            <div class="hidden md:flex gap-8 items-center font-medium text-sm tracking-wide">
+                <a href="#home" class="hover:text-blue-400 transition">HOME</a>
+                <a href="#features" class="hover:text-blue-400 transition">FEATURES</a>
+                <a href="#gallery" class="hover:text-blue-400 transition">GALLERY</a>
+                <a href="#" class="bg-blue-600 hover:bg-blue-500 px-6 py-2.5 rounded-full font-bold shadow-lg shadow-blue-900/20 transition transform hover:-translate-y-1">JOIN DISCORD</a>
+            </div>
+
+            <button class="md:hidden text-white"><i class="fa-solid fa-bars-staggered text-2xl"></i></button>
+        </div>
+    </nav>
+
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 px-6 overflow-hidden">
+        <div class="absolute inset-0 z-0 opactiy-20">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-[120px] animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px]"></div>
+        </div>
+
+        <div class="relative z-10 text-center" data-aos="fade-up" data-aos-duration="1000">
+            <h2 class="inline-block px-4 py-1.5 mb-6 border border-blue-500/30 rounded-full bg-blue-500/10 text-blue-400 text-xs font-bold tracking-[0.2em] uppercase">
+                The Ultimate Indonesian Sim Community
+            </h2>
+            <h1 class="text-6xl md:text-9xl font-black mb-8 tracking-tight leading-none">
+                ENJOY THE <br> <span class="text-gradient">HIGHWAY.</span>
+            </h1>
+            <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+                Jelajahi aspal Nusantara dengan detail terbaik. Rasakan sensasi berkendara realistik di tol Trans Jawa dan Trans Sumatra bersama ribuan pengemudi virtual lainnya.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-5 justify-center">
+                <button class="px-10 py-5 bg-white text-black rounded-2xl font-black text-lg hover:bg-blue-500 hover:text-white transition-all duration-300 shadow-xl">
+                    START DRIVING
+                </button>
+                <button class="px-10 py-5 glass rounded-2xl font-black text-lg hover:bg-white/10 transition-all border border-white/10">
+                    EXPLORE MAP
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 pb-24">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6" data-aos="fade-up">
+            <div class="glass p-8 rounded-3xl text-center border-b-4 border-blue-600">
+                <div class="text-4xl font-black mb-2 uppercase">12K+</div>
+                <div class="text-slate-500 text-xs font-bold tracking-widest">Members</div>
+            </div>
+            <div class="glass p-8 rounded-3xl text-center border-b-4 border-orange-500">
+                <div class="text-4xl font-black mb-2 uppercase">24/7</div>
+                <div class="text-slate-500 text-xs font-bold tracking-widest">Active Server</div>
+            </div>
+            <div class="glass p-8 rounded-3xl text-center border-b-4 border-purple-600">
+                <div class="text-4xl font-black mb-2 uppercase">150+</div>
+                <div class="text-slate-500 text-xs font-bold tracking-widest">Mods Ready</div>
+            </div>
+            <div class="glass p-8 rounded-3xl text-center border-b-4 border-green-500">
+                <div class="text-4xl font-black mb-2 uppercase">500+</div>
+                <div class="text-slate-500 text-xs font-bold tracking-widest">KM Routes</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
+            <div class="relative" data-aos="zoom-in">
+                <div class="absolute -inset-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl blur opacity-20"></div>
+                <div class="relative bg-slate-900 rounded-3xl overflow-hidden border border-white/10 aspect-video">
+                    <img src="https://images.unsplash.com/photo-1542281286-9e0a16bb7366?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover" alt="Gameplay">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+                </div>
+            </div>
+            <div data-aos="fade-left">
+                <h3 class="text-blue-500 font-bold mb-4">SYSTEM EXPERIENCE</h3>
+                <h2 class="text-4xl md:text-5xl font-black mb-6 leading-tight">SENSASI REALISTIK <br> JALANAN INDONESIA</h2>
+                <div class="space-y-6">
+                    <div class="flex gap-5">
+                        <div class="flex-shrink-0 w-12 h-12 glass rounded-lg flex items-center justify-center text-orange-500 italic font-bold">01</div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2 uppercase tracking-wide">Traffic Nusantara</h4>
+                            <p class="text-slate-400">Bertemu bus AKAP, truk logistik, hingga travel gelap yang membuat suasana jalanan terasa nyata.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-5">
+                        <div class="flex-shrink-0 w-12 h-12 glass rounded-lg flex items-center justify-center text-blue-500 italic font-bold">02</div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2 uppercase tracking-wide">Rest Area & Gerbang Tol</h4>
+                            <p class="text-slate-400">Istirahat sejenak di rest area ikonik atau antre di gerbang tol otomatis dengan sistem E-Toll virtual.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="updates" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div data-aos="fade-right">
+                <h2 class="text-blue-500 font-bold mb-2 tracking-[0.3em] uppercase">Development Log</h2>
+                <h3 class="text-4xl md:text-5xl font-black italic">UPDATE <span class="text-gradient">TERBARU.</span></h3>
+            </div>
+            <div class="text-slate-500 font-medium md:text-right" data-aos="fade-left">
+                Versi Saat Ini: <span class="text-white bg-slate-800 px-3 py-1 rounded-lg border border-white/10">v2.4.0-Stable</span>
+            </div>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-8">
+            <div class="glass p-8 rounded-[2rem] border-t-2 border-blue-500 group hover:bg-white/5 transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex justify-between items-start mb-6">
+                    <span class="bg-blue-600 text-[10px] font-black px-3 py-1 rounded-full animate-pulse shadow-[0_0_15px_rgba(37,99,235,0.6)]">NEW</span>
+                    <span class="text-slate-500 text-sm">15 September 2026</span>
+                </div>
+                <h4 class="text-xl font-black mb-4 group-hover:text-blue-400 transition">MAP: JALUR LINTAS Jawa Barat</h4>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    Ekspansi besar! Kini kamu bisa menyeberang dari Merak ke Bakauheni dengan kapal feri interaktif dan menjelajahi aspal Sumatra yang menantang.
+                </p>
+                <ul class="text-xs space-y-2 text-slate-500">
+                    <li><i class="fa-solid fa-plus text-blue-500 mr-2"></i> Penambahan 50KM Jalan Tol Baru</li>
+                    <li><i class="fa-solid fa-plus text-blue-500 mr-2"></i> Rest Area tol trans jawa</li>
+                </ul>
+            </div>
+
+            <div class="glass p-8 rounded-[2rem] border-t-2 border-purple-500 group hover:bg-white/5 transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex justify-between items-start mb-6">
+                    <span class="bg-purple-600 text-[10px] font-black px-3 py-1 rounded-full">OPTIMIZATION</span>
+                    <span class="text-slate-500 text-sm">15 September 2026</span>
+                </div>
+                <h4 class="text-xl font-black mb-4 group-hover:text-purple-400 transition">GRAPHIC ENGINE 2.0</h4>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    Peningkatan kualitas cahaya lampu jalan dan efek aspal basah saat hujan agar pengalaman "Night Drive" semakin imersif.
+                </p>
+                <ul class="text-xs space-y-2 text-slate-500">
+                    <li><i class="fa-solid fa-wrench text-purple-500 mr-2"></i> Perbaikan FPS di Gerbang Tol</li>
+                    <li><i class="fa-solid fa-wrench text-purple-500 mr-2"></i> Tekstur HD Rambu Lalu Lintas</li>
+                </ul>
+            </div>
+
+            <div class="glass p-8 rounded-[2rem] border-t-2 border-orange-500 group hover:bg-white/5 transition-all duration-500" data-aos="fade-up" data-aos-delay="300">
+                <div class="flex justify-between items-start mb-6">
+                    <span class="bg-orange-600 text-[10px] font-black px-3 py-1 rounded-full">SYSTEM</span>
+                    <span class="text-slate-500 text-sm">02 Jan 2026</span>
+                </div>
+                <h4 class="text-xl font-black mb-4 group-hover:text-orange-400 transition">NEW VEHICLE PHYSICS</h4>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    Pembaruan sistem suspensi untuk Beberapa kendaraan, menyesuaikan muatan yang dibawa
+                </p>
+                <ul class="text-xs space-y-2 text-slate-500">
+                    <li><i class="fa-solid fa-gear text-orange-500 mr-2"></i> Real Engine Sound (Internal)</li>
+                    <li><i class="fa-solid fa-gear text-orange-500 mr-2"></i> Sistem Pengereman ABS</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mt-12 text-center" data-aos="zoom-in">
+            <a href="#" class="inline-flex items-center gap-2 text-slate-400 hover:text-white transition font-bold text-sm tracking-widest border-b border-white/10 pb-2">
+                LIHAT SEMUA LOG UPDATE <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+        </div>
+    </section>
+
+    <section id="leaks" class="relative py-24 px-6 overflow-hidden bg-slate-950">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent"></div>
+        <div class="absolute -right-20 top-1/2 w-96 h-96 bg-yellow-600/5 rounded-full blur-[120px]"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="flex items-center gap-4 mb-12" data-aos="fade-right">
+                <div class="h-px flex-grow bg-yellow-500/20"></div>
+                <div class="flex items-center gap-2 px-6 py-2 border border-yellow-500/30 rounded-full bg-yellow-500/5">
+                    <i class="fa-solid fa-user-secret text-yellow-500 animate-bounce"></i>
+                    <span class="text-yellow-500 font-black text-xs tracking-[0.3em] uppercase">Classified Leaks</span>
+                </div>
+                <div class="h-px flex-grow bg-yellow-500/20"></div>
+            </div>
+
+            <div class="text-center mb-16" data-aos="zoom-in">
+                <h2 class="text-4xl md:text-6xl font-black italic tracking-tighter mb-4">SNEAK <span class="text-yellow-500">PEEK.</span></h2>
+                <p class="text-slate-500 max-w-xl mx-auto">Apa yang sedang kami kerjakan di balik layar? Jangan sebarkan ini keluar!</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="group relative overflow-hidden rounded-[2.5rem] border border-white/5 bg-slate-900 shadow-2xl" data-aos="fade-up">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1518413812836-e8e390c507c3?auto=format&fit=crop&q=60&w=800" 
+                             class="w-full h-full object-cover transition duration-700 group-hover:scale-110 group-hover:rotate-1 brightness-[0.3] group-hover:brightness-75 blur-[2px] group-hover:blur-0" 
+                             alt="Leak Image">
+                    </div>
+                    
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="px-3 py-1 bg-yellow-600 text-[10px] font-black rounded-md">UNRELEASED</span>
+                            <span class="text-xs text-yellow-500/70 font-mono tracking-tighter">PROJECT_KODENAME: MERAK_V3</span>
+                        </div>
+                        <h4 class="text-2xl font-black mb-2 uppercase group-hover:text-yellow-500 transition">Rombak Total Pelabuhan Merak</h4>
+                        <p class="text-slate-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-y-4 group-hover:translate-y-0">
+                            Kami sedang mengerjakan sistem antrean kapal feri yang lebih realistis dan tekstur dermaga baru yang lebih detail.
+                        </p>
+                    </div>
+
+                    <div class="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.1)_50%),linear-gradient(90deg,rgba(255,0,0,0.03),rgba(0,255,0,0.01),rgba(0,0,255,0.03))] bg-[length:100%_4px,3px_100%]"></div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-[2.5rem] border border-white/5 bg-slate-900 shadow-2xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1549490339-950005d53a20?auto=format&fit=crop&q=60&w=800" 
+                             class="w-full h-full object-cover transition duration-700 group-hover:scale-110 group-hover:-rotate-1 brightness-[0.3] group-hover:brightness-75 blur-[2px] group-hover:blur-0" 
+                             alt="Leak Image">
+                    </div>
+                    
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="px-3 py-1 bg-yellow-600 text-[10px] font-black rounded-md">IN DEVELOPMENT</span>
+                            <span class="text-xs text-yellow-500/70 font-mono tracking-tighter">AUTO_GATE_SYSTEM_V2</span>
+                        </div>
+                        <h4 class="text-2xl font-black mb-2 uppercase group-hover:text-yellow-500 transition">Sistem E-Toll Nirsentuh</h4>
+                        <p class="text-slate-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-y-4 group-hover:translate-y-0">
+                            Bocoran sistem pembayaran tol baru tanpa perlu berhenti (MLFF) yang akan segera diuji coba di map Trans Jawa.
+                        </p>
+                    </div>
+
+                    <div class="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.1)_50%),linear-gradient(90deg,rgba(255,0,0,0.03),rgba(0,255,0,0.01),rgba(0,0,255,0.03))] bg-[length:100%_4px,3px_100%]"></div>
+                </div>
+            </div>
+
+            <div class="mt-12 flex justify-center" data-aos="fade-up">
+                <div class="inline-flex items-center gap-4 px-6 py-3 border border-dashed border-yellow-500/40 rounded-xl bg-yellow-500/5 text-yellow-500/60 text-xs font-mono">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    Semua konten di atas masih dalam tahap pengembangan dan dapat berubah sewaktu-waktu.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 border-t border-white/5 bg-black/50">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex flex-col items-center mb-10">
+                <div class="text-4xl font-black mb-4 tracking-tighter uppercase">IHE<span class="text-blue-600">.</span></div>
+                <p class="text-slate-500 max-w-md">The Number #1 Community for Indonesian Highway Lovers. Join our journey today.</p>
+            </div>
+            <div class="flex justify-center gap-8 mb-10 text-2xl">
+                <a href="#" class="text-slate-500 hover:text-white transition"><i class="fa-brands fa-discord"></i></a>
+                <a href="#" class="text-slate-500 hover:text-white transition"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" class="text-slate-500 hover:text-white transition"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="text-slate-500 hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="text-xs text-slate-600 uppercase tracking-widest font-bold">
+                &copy; 2026 Indonesia Highway Experience. Built for Drivers.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2');
+            } else {
+                nav.classList.remove('py-2');
+            }
+        });
+    </script>
+</body>
+</html>
